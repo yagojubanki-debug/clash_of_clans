@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: black;
+  height: 12vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  z-index: 1001;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 35.5vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1001;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu{
+    display: block;
+    z-index: 1002;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.centro-vila {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  position: relative;
+}
+
+.centro-vila{
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.centro-vila img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.centro-vila h2, .container p {
+  margin: 10px 0;
+}
+
+.centro-vila:hover img {
+  transform: scale(1.1);
+}
+
+.stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container:hover .stats {
+  opacity: 1;
+}
+
+.centro-vila {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+}
+/*CENTROS DE VILA*/
+
+main :nth-child(1){
+  transition-delay: 0ms;
+}
+main :nth-child(2) {
+  transition-delay: 100ms;
+}
+
+main :nth-child(3) {
+  transition-delay: 200ms;
+}
+
+main :nth-child(4) {
+  transition-delay: 300ms;
+}
+
+main :nth-child(5) {
+  transition-delay: 400ms;
+}
+
+main :nth-child(6) {
+  transition-delay: 500ms;
+}
+
+main :nth-child(7) {
+  transition-delay: 600ms;
+}
+
+main :nth-child(8) {
+  transition-delay: 700ms;
+}
+
+main :nth-child(9) {
+  transition-delay: 800ms;
+}
+
+main :nth-child(10) {
+  transition-delay: 900ms;
+}
+
+main :nth-child(11) {
+  transition-delay: 1000ms;
+}
+
+main :nth-child(12) {
+  transition-delay: 1100ms;
+}
+
+main :nth-child(13) {
+  transition-delay: 0ms;
+}
+
+main :nth-child(14) {
+  transition-delay: 100ms;
+}
+
+main :nth-child(15) {
+  transition-delay: 200ms;
+}
+
+main :nth-child(16) {
+  transition-delay: 300ms;
+}
