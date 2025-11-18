@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: black;
+  height: 12vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  z-index: 1001;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 35.5vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1001;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+    z-index: 1002;
+  }
+
+  .imagem2 {
+    margin-left: 155px;
+  }
+
+  .textos2 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .sobre_jogo2 {
+    flex-direction: column-reverse;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*sobre o jogo*/
+
+.imagem {
+  width: 100%;
+}
+
+.imagem img {
+  width: 100%;
+}
+
+/*parte1*/
+.textos1 {
+  font-family: roboto, sans-serif;
+  display: flex;
+  padding: 50px;
+  padding-top: 90px;
+  text-align: justify;
+  font-size: 12px;
+}
+
+.titulo1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.imagem2 {
+  display: flex;
+  width: 60%;
+}
+
+.imagem2 img {
+  display: flex;
+  width: 100%;
+}
+
+/*parte2*/
+.sobre_jogo2 {
+  display: flex;
+  font-family: roboto, sans-serif;
+  padding: 50;
+  padding-top: 90;
+  background-image: url(/inicio/nada.jpg);
+  background-size: cover;
+}
+
+.textos2 {
+  padding: 50;
+  padding-top: 130px;
+  text-align: justify;
+  font-size: 12px;
+  color: white;
+}
+
+.titulo2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.imagem3 {
+  width: 100%;
+}
+
+.imagem3 img {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tudo {
+  margin: 50;
+}
+
+.imagem {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.textos1 {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  transition-delay: 200ms;
+}
+
+.sobre_jogo2 {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.imagem2 {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all s;
+}
